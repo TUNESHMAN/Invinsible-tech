@@ -10,6 +10,11 @@ function getWeather(cityName) {
     .then((response) => {
       if (response.data.success === false) {
         console.log("Please provide a valid location");
+      } else {
+        result = {
+          time: response.data.location.localtime,
+          weather: response.data.current.weather_descriptions,
+        };
       }
     })
     .catch((error) => {
