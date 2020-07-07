@@ -15,9 +15,12 @@ function getWeather(cityName) {
           time: response.data.location.localtime,
           weather: response.data.current.weather_descriptions,
         };
+        console.log(result);
       }
     })
     .catch((error) => {
       console.log(error);
     });
 }
+
+getWeather("abuja");
