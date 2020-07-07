@@ -1,5 +1,5 @@
 const axios = require("axios");
-var result;
+let result;
 
 function getWeather(cityName) {
   return axios
@@ -23,4 +23,6 @@ function getWeather(cityName) {
     });
 }
 
-getWeather("abuja");
+getWeather("florida");
+
+module.exports = getWeather;

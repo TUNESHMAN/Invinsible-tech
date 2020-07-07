@@ -19,5 +19,8 @@
   "homepage": "https://github.com/TUNESHMAN/invinsible-tech#readme",
   "dependencies": {
     "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
   }
 }
