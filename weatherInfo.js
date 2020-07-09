@@ -1,5 +1,5 @@
 const axios = require("axios");
-let result;
+let weatherResult;
 
 function getWeather(cityName) {
   return axios
@@ -11,11 +11,12 @@ function getWeather(cityName) {
       if (response.data.success === false) {
         console.log("Please provide a valid location");
       } else {
-        result = {
+        weatherResult = {
           time: response.data.location.localtime,
           weather: response.data.current.weather_descriptions,
         };
-        console.log(result);
+        console.log(weatherResult);
+        return weatherResult;
       }
     })
     .catch((error) => {
@@ -23,6 +24,6 @@ function getWeather(cityName) {
     });
 }
 
-getWeather("florida");
+getWeather("accra");
 
 module.exports = getWeather;
